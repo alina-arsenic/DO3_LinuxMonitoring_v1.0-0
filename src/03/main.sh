@@ -1,13 +1,10 @@
 #!/bin/bash
 
-chmod +x ./stats.sh
-
 if ! [ $# -eq 4 ]; then
     echo "Please give 4 arguments."
 else
-    reg='[1-6]'
     for param in "$@"; do
-        if ! [[ $param =~ $reg ]]; then
+        if ! [[ $param =~ [1-6] ]]; then
             err=1
         fi
     done

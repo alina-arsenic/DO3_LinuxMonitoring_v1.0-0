@@ -1,6 +1,5 @@
 #!/bin/bash
 
-chmod +x ./stats.sh
 bash ./stats.sh
 echo -n "Wish to write this in a file? (y/n) "; read Answer
  if [[ "$Answer" == "y" || "$Answer" == "Y" ]]
