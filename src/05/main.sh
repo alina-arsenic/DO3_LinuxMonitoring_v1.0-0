@@ -1,8 +1,7 @@
 #!/bin/bash
 
-start=$(date +%s%N)
-
 if [ "/" = "$(echo $1 | rev | cut -c1)" ] && [ -d $1 ]; then
+    start=$(date +%s%N)
     bash ./folders.sh $1
     bash ./file_counts.sh $1
     bash ./file_sizes.sh $1
